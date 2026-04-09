@@ -1,8 +1,15 @@
+import Header from "./components/header";
+import TaskForm from "./components/taskform";
+import TaskList from "./components/tasklist";
+
+
 function App() {
   return (
-   <h1 className="text-4xl font-bold text-blue-600 p-4">
-   Task Manager
-   </h1>
+   <div>
+      <Header />
+      <TaskForm />
+      <TaskList />
+   </div>
   );
 }
 
