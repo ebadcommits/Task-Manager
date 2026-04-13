@@ -16,12 +16,18 @@ function App() {
     }
     setTasks([...tasks, newTask])
   }
-
-  return (
+  
+  
+  function deleteTask(id){
+    setTasks(tasks.filter((task) => task.id !== id))
+  }
+  
+  
+      return (
    <div className="container mx-auto max-w-lg mt-10 p-4">
       <Header />
       <TaskForm onAddTask={addTask}/>
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} onDeleteTask={deleteTask} />
    </div>
   );
 }
