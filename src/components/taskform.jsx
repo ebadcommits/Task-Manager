@@ -1,8 +1,8 @@
-import {usestate} from "react"
+import {useState} from "react"
 
 
 function TaskForm({onAddTask}) {
-  const [text, setText] = usestate("")
+  const [text, setText] = useState("")
 
   function handleSubmit(e){
     e.preventDefault()

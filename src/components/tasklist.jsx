@@ -8,7 +8,7 @@ function TaskList({tasks}) {
   return (
     <div className="mt-5 flex flex-col gap-3">
       {tasks.map((task) =>(
-        <TaskItem Key={task.id} task={task} />
+        <TaskItem key={task.id} task={task} />
       ))}
     </div>
   );
