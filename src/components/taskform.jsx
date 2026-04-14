@@ -1,5 +1,6 @@
 import {useState} from "react"
-
+import Button from "./ui/button";
+import Input from "./ui/input";
 
 function TaskForm({onAddTask}) {
   const [text, setText] = useState("")
@@ -7,20 +8,19 @@ function TaskForm({onAddTask}) {
   function handleSubmit(e){
     e.preventDefault()
     if (!text.trim()) return
-
     onAddTask(text)
     setText("")
   }
+
   return (
     <form onSubmit={handleSubmit} className="flex gap-2">
-      <input
-      value={text}
-      onChange={(e) => setText(e.target.value)}
-      type="text" 
-      placeholder="Enter a task..."
-      className="border p-2 rounded w-full" />
-      <button type="submit"
-      className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Add Task</button>
+      <Input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Enter a task..."
+        />
+      
+      <Button type="submit" className=" hover:bg-blue-600">Add</Button>
     </form>
   );
 }

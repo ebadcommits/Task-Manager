@@ -1,31 +1,27 @@
-import Button from "./ui/Button";
-import Card from "./ui/Card";
+import Button from "./ui/button";
+import Card from "./ui/card";
 
-function TaskItem({ task, onDeleteTask, onToggleTask }) {
+
+function TaskItem({task, onDeleteTask, onToggleTask}) {
   return (
-    <Card className="flex justify-between items-center">
-      <div className="flex items-center gap-3">
-        <input
-          type="checkbox"
-          checked={task.completed}
-          onChange={() => onToggleTask(task.id)}
-        />
+    <Card className="flex justify-between items-center"> 
+    <div className="flex items-center gap-3">
 
-        <span
-          className={
-            task.completed ? "line-through text-gray-500" : ""
-          }
-        >
-          {task.text}
-        </span>
-      </div>
+      <input type= "checkbox"
+      checked={task.completed}
+      onChange={() => onToggleTask(task.id)} />
 
-      <Button
-        className="bg-red-500 hover:bg-red-600"
-        onClick={() => onDeleteTask(task.id)}
+      <span className={
+        task.completed ? "line-through text-gray-500" : ""
+      }
       >
+        {task.text}</span>
+      
+    </div>
+     
+      <Button className="text-red-500 hover:text-red-500" onClick={() => onDeleteTask(task.id)}>
         Delete
-      </Button>
+        </Button>
     </Card>
   );
 }
