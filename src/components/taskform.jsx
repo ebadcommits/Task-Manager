@@ -20,7 +20,7 @@ function TaskForm({onAddTask}) {
       placeholder="Enter a task..."
       className="border p-2 rounded w-full" />
       <button type="submit"
-      className="bg-blue-500 text-white px-4 py-2 rounded">Add Task</button>
+      className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">Add Task</button>
     </form>
   );
 }
