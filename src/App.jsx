@@ -22,12 +22,19 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id))
   }
   
-  
+  function toggleTask(id){
+    setTasks(
+      tasks.map((task)=>
+      task.id == id ?
+        {...task, completed: !task.completed}
+          : task)
+    )
+  }
       return (
    <div className="container mx-auto max-w-lg mt-10 p-4">
       <Header />
       <TaskForm onAddTask={addTask}/>
-      <TaskList tasks={tasks} onDeleteTask={deleteTask} />
+      <TaskList tasks={tasks} onDeleteTask={deleteTask} onToggleTask={toggleTask} />
    </div>
   );
 }
