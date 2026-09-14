@@ -4,7 +4,7 @@ A responsive task management application built with React and Tailwind CSS to pr
 
 ## 🚀 Live Demo
 
-[View Live Demo]([YOUR_LIVE_DEMO_URL](https://ebadcommits.github.io/Task-Manager/))
+[View Live Demo](https://ebadcommits.github.io/Task-Manager/)
 
 ## 📸 Preview
 <img width="935" height="446" alt="image" src="https://github.com/user-attachments/assets/d2dfb6a9-4761-4e3b-8ed2-061188dd0806" />
